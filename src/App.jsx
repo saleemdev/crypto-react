@@ -3,8 +3,6 @@ import { useState } from "react";
 import "./App.css";
 import { Button, Form } from "react-bootstrap";
 import { AES, enc } from "crypto-js";
-import { CryptoJS } from "crypto-js";
-import sha256 from "crypto-js/sha256";
 
 console.log("Loaded cypher stuff");
 function App() {
@@ -13,7 +11,6 @@ function App() {
   const [pwd, setPwd] = useState(null);
   const [encryptedPassword, setEncryptedPassword] = useState("");
   const [decryptedPassword, setDecryptedPassword] = useState("");
-  const algorithm = "aes-256-cfb";
   const APIKEY = "bc25a22a8aa7d8b2904a7471a9d2d5fb";
   let bytes;
   const encryptPwd = () => {
